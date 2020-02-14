@@ -1,0 +1,19 @@
+<table class="table table-striped">
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Village</th>
+    </tr>
+    @foreach (var ninja in ViewBag.Ninjas)
+    {
+        <tr>
+            <td>
+                <a href="/ninja/@ninja.NinjaId">
+                    @ninja.Name
+                </a>
+            </td>
+            <td>@ninja.Age</td>
+            <td>@ninja.Village</td>
+        </tr>
+    }
+</table>

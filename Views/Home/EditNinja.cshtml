@@ -1,0 +1,23 @@
+@model Ninja;
+
+<form action="/ninjas/update" method="post">
+    <input type="hidden" name="NinjaId" value="@Model.NinjaId" />
+    <div class="form-group">
+        <label>Name</label>
+        <input type="text" name="Name" class="form-control" value="@Model.Name" />
+        <span asp-validation-for="Name"></span>
+    </div>
+    <div class="form-group">
+        <label>Age</label>
+        <input type="number" name="Age" class="form-control" value="@Model.Age"/>
+        <span asp-validation-for="Age"></span>
+    </div>
+    <div class="form-group">
+        <label>Village</label>
+        <input type="text" name="Village" class="form-control" value="@Model.Village" />
+        <span asp-validation-for="Village"></span>
+    </div>
+    <input type="submit" value="Update Ninja" class="btn btn-info" />
+</form>
+
+<a href="/ninja/@Model.NinjaId/delete" class="btn btn-danger">Delete</a>
